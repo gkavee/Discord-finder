@@ -66,7 +66,7 @@ try:
         q.send_keys(res)
         q.send_keys(u'\ue007')
         q.clear()
-        time.sleep(1)
+        time.sleep(3)
 
 # CLOSING MODAL WINDOW
 # закрывание модалки
