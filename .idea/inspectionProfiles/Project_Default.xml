@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="coolsite.women.templatetags.women_tags.women" />
+          <option value="coolsite.women.templatetags.women_tags.*" />
+          <option value="rapi.rapi.urls.app" />
+          <option value="rapi.rapi.urls.index" />
+          <option value="rapi.views" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
