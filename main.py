@@ -16,7 +16,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # DATA
 # данные древних
-name = "Eerikkie" # <- Ник чела (на конце "#" писать)
+name = "Eerikkie" # <- Ник чела
 start = 1 # <- С какого тега начинать (1 = 0001)
 end = 10000 # <- На каком теге закончить (10000 = 9999)
 
