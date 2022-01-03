@@ -1,7 +1,6 @@
 import time
-import playsound as playsound
+from playsound import playsound
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from fake_useragent import UserAgent
@@ -30,7 +29,7 @@ options.add_argument("--window-size=1200,900")
 
 
 s = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service = s, options=options)
+driver = webdriver.Chrome(service=s, options=options)
 
 try:
     driver.get(url="https://discord.com/channels/@me/")
@@ -76,20 +75,14 @@ try:
         f.click()
         print(res + " - [X]")
 
-# WHEN FOUND
-# типа нашли чела
-
-        try:
-            x = driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div/div[2]/div/div/div/div/div[2]/div/div[1]/header/form/div[3]")
-            continue
-        except NoSuchElementException:
-            print(' - [FOUND]')
-            playsound('sound.mp3') # Slax - Mimika Euphorica
-
 
 except Exception as ex:
     print(ex)
 
+# NOTIFICATION
+# уведомление
+
 finally:
+    playsound('sound.mp3', False)  # Slax - Mimika Euphorica
     driver.close()
     driver.quit()
