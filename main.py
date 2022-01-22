@@ -15,8 +15,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # DATA
 # данные древних
-name = "Eerikkie" # <- Ник чела
-start = 1 # <- С какого тега начинать (1 = 0001)
+name = 'Fulmar' # <- Ник чела
+start = 2902 # <- С какого тега начинать (1 = 0001)
 end = 10000 # <- На каком теге закончить (10000 = 9999)
 
 name = str(name + "#")
@@ -60,7 +60,7 @@ try:
 # FINDING
 # находим чела
 
-        q = driver.find_element(By.XPATH, ("/html/body/div[1]/div[2]/div/div[2]/div/div/div/div/div[2]/div/div[1]/header/form/div[2]/input"))
+        q = driver.find_element(By.XPATH, ("/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/div[1]/header/form/div[2]/div/input"))
         # не удалять таймслип
         time.sleep(1)
         q.send_keys(res)
@@ -71,7 +71,7 @@ try:
 # CLOSING MODAL WINDOW
 # закрывание модалки
 
-        f = driver.find_element(By.XPATH, "/html/body/div[1]/div[5]/div[2]/div/div/form/div[2]/button")
+        f = driver.find_element(By.XPATH, "/html/body/div[1]/div[4]/div[2]/div/div/form/div[2]/button")
         f.click()
         print(res + " - [X]")
 
@@ -83,6 +83,7 @@ except Exception as ex:
 # уведомление
 
 finally:
+    print(res + " - [FOUND]")
     playsound('sound.mp3', False)  # Slax - Mimika Euphorica
     driver.close()
     driver.quit()
