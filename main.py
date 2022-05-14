@@ -9,14 +9,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 # ENG
 # log in to the discord via QR-code
 
-# RU
-# Заходим в дисик с телефона и входим в него через qr-код
-# Мне лень вот эти все вводы и капчу прописывать
-
-# DATA
-# данные древних
-name = 'Fulmar' # <- Ник чела
-start = 2902 # <- С какого тега начинать (1 = 0001)
+name = 'zxc' # <- Ник чела
+start = 1234 # <- С какого тега начинать (1 = 0001)
 end = 10000 # <- На каком теге закончить (10000 = 9999)
 
 name = str(name + "#")
@@ -35,7 +29,6 @@ try:
     driver.get(url="https://discord.com/channels/@me/")
     time.sleep(10)
 
-    # клик по настройкам
     e = driver.find_element(By.XPATH, ("/html/body/div[1]/div[2]/div/div[2]/div/div/div/div/div[2]/section/div/div[3]/div[5]"))
     e.click()
     time.sleep(1)
@@ -57,9 +50,6 @@ try:
         i = str(i)
         res = str(name + i)
 
-# FINDING
-# находим чела
-
         q = driver.find_element(By.XPATH, ("/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/div[1]/header/form/div[2]/div/input"))
         # не удалять таймслип
         time.sleep(1)
@@ -67,9 +57,6 @@ try:
         q.send_keys(u'\ue007')
         q.clear()
         time.sleep(5)
-
-# CLOSING MODAL WINDOW
-# закрывание модалки
 
         f = driver.find_element(By.XPATH, "/html/body/div[1]/div[4]/div[2]/div/div/form/div[2]/button")
         f.click()
@@ -84,6 +71,6 @@ except Exception as ex:
 
 finally:
     print(res + " - [FOUND]")
-    playsound('sound.mp3', False)  # Slax - Mimika Euphorica
+    playsound('sound.mp3', False)
     driver.close()
     driver.quit()
